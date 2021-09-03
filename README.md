@@ -1,5 +1,38 @@
 # program-smoothing-fuzzing
 
+## Environment
+
+Tested on Linux verison 4.15.0-76-generic Ubuntu 18.04 64bit with RTX 2080ti
+
+- Python 3.7
+- Pytorch 1.3.1
+
+## Setup
+
+### Execution of the baseline fuzzers
+
+For the execution procedures of the baseline fuzzers, please refer to the following links:
+
+- [AFL](https://github.com/google/AFL)
+- [Neuzz](https://github.com/Dongdongshe/neuzz)
+- [MTFuzz](https://github.com/rahlk/MTFuzz)
+
+
+### Fuzzing with the RESuzz
+
+> The procedures are the same to the neuzz variants.
+```shell
+
+# build the fuzzer
+$ gcc -O3 -funroll-loops ./fuzz.c -o fuzz
+
+# start fuzz (max_len refers to the maximum size of the inital seeds)
+$ python nn.py /path/to/program [params]
+$ ./fuzz -i fuzz_input -o seeds -l max_len /path/to/program [params] @@
+
+```
+
+
 ## Benchmark Statistics
 
 ### SE:
