@@ -1,6 +1,6 @@
 # program-smoothing-fuzzing
 
-https://github.com/Tricker-z/PreFuzz
+Now the prefuzz has been migrated to the new repository: https://github.com/Tricker-z/PreFuzz
 
 ## Environment
 
